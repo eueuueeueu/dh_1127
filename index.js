@@ -88,3 +88,72 @@
 // console.log(s30.split('/'));  //['WebClass', '11.27', 'code', 'index.html']
 // let s31 = 'abc_def_ghi_xyz'
 // console.log(s31.split('_'));  //['abc', 'def', 'ghi', 'xyz']
+
+// // 如何定义数组
+// // 1、通过字面量去定义数组
+// let arr1 = [1, 2, 3, 4, 5, 6]
+// // 数组的成员的个数 就是数组的长度 用length属性获取
+// console.log(arr1.length); //6
+// // 数组的成员可以为任意类型
+// var arr2 = [1, '2', true, undefined, null, []]
+// // 获取数组的第一个元素
+// var arr2_first_item = arr2[0]  //1
+// // 获取数组的最后一个元素
+// var arr2_last_item = arr2[arr2.length - 1]  //
+
+// 当数组中一个元素都不存在时，它是空数组
+// 当数组中某些位置不提供任何数据的情况下 就会形成稀疏数组
+// let arr3 = [1, , 3, , 4]
+// console.log(arr3);
+// let arr4 = ['abc', false, null, NaN]
+// for (let i = 0; i < arr4.length; i++) {
+//   console.log(arr4[i]);
+// }
+
+
+// // 练习：下划线命名法转换为驼峰命名法/帕斯卡命名法
+// let msg = 'abc_def_ghi'
+// let result = ''
+// let msg2 = msg.split('_')
+// console.log(msg2);
+// for (let i = 0; i < msg2.length; i++) {
+//   let temp = ''
+//   for (let j = 0; j < msg2[i].length; j++) {
+//     if (j === 0) {
+//       temp += msg2[i][j].toUpperCase()
+//     } else {
+//       temp += msg2[i][j]
+//     }
+//   }
+//   result += temp
+// }
+// console.log(result);
+
+
+// 数组的方法
+// 放数组中增加成员(4种)
+// 1.通过索引赋值的方式
+// let arr7 = []
+// arr7[0] = 123
+// arr7[1] = 234
+// arr7[2] = 345
+// console.log(arr7);  //[123,234,345]
+
+// let arr8 = [1, 2, 3, 4, 5, 6, 6, 4, 3, 2, 4, 3, 2, 3, 43, 2, 3]
+// arr8[arr8.length] = null
+// arr8[arr8.length] = null
+// arr8[arr8.length] = null
+// arr8[arr8.length] = null
+// arr8[arr8.length] = null
+// console.log(arr8);  //[1, 2, 3, 4, 5, 6, 6, 4, 3, 2, 4, 3, 2, 3, 43, 2, 3, null, null, null, null, null]
+
+// 2.通过push在数组尾部追加元素
+// let arr9 = [1, 2, 3]
+// arr9.push('我是通过push追加的成员')
+// console.log(arr9);
+
+// // 3.通过unshift在数组的头部追加元素
+// arr9.unshift('666')
+// console.log(arr9);
+
+// 4.

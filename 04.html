@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // 4.删除字符串中所有数字，但保留空格字符串       "ert 123dd df"  ---->"ert dd df"
+  let str = 'ert 123dd df'
+  let reg = /[0-9]/g
+  let newStr = str.replace(reg, '')
+  // for (let i = 0; i < str.length; i++) {
+  //   if (str[i] !== "number") {
+  //     newStr += str[i]
+  //   }
+  // }
+  document.write(`${str}变成了${newStr}`);
+</script>
+
+</html>

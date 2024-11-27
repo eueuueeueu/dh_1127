@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // 驼峰命名法 abcDefGhi
+  // 下划线命名法 abc_def_ghi
+  // 帕斯卡命名法 AbcDefGhi
+  // 下划线命名法转换为驼峰命名法/帕斯卡命名法
+
+  // 老师解法（数组）
+  let msg = 'abc_def_ghi'
+  let result = ''
+  let msg2 = msg.split('_')
+  console.log(msg2);
+  for (let i = 0; i < msg2.length; i++) {
+    let temp = ''
+    for (let j = 0; j < msg2[i].length; j++) {
+      if (j === 0) {
+        temp += msg2[i][j].toUpperCase()
+      } else {
+        temp += msg2[i][j]
+      }
+    }
+    result += temp
+  }
+  document.write(`${msg}变成了${result}`);
+  document.write('<br>')
+
+  let result2 = ''
+  result2 += msg2[0]
+  for (let i = 1; i < msg2.length; i++) {
+    let temp = ''
+    for (let j = 0; j < msg2[i].length; j++) {
+      if (j === 0) {
+        temp += msg2[i][j].toUpperCase()
+      } else {
+        temp += msg2[i][j]
+      }
+    }
+    result2 += temp
+  }
+  // document.write(result2);
+  document.write(`${msg}变成了${result2}`);
+  // 解法二
+  // let msg = 'abc_def_ghi'
+</script>
+
+</html>

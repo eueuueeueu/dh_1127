@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // 7.去字符串中所有的空格    "    a    b    c     " ---->"abc"
+  let str = prompt('输入一个带空格的字符串,将去掉字符串中所有的空格返回')
+  let newStr = ''
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== ' ') {
+      newStr += str[i]
+    }
+  }
+  document.write(`${str}变成了${newStr}`);
+  document.write('<br>页面打印会折叠空格，去控制台看')
+  console.log(`${str}变成了${newStr}`);
+</script>
+
+</html>

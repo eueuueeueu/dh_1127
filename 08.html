@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // 8.去字符串首尾空格，不使用trim的方法     "    a    b    c     " ---->"a    b    c"
+  // trim 去除字符串首尾的空格
+  let str = prompt('输入一个两边和中间都带空格的字符串,将去字符串首尾空格,保留中间空格')
+  let newStr = ''
+  let start = 0
+  let end = str.length - 1
+  while (str[start] === ' ') {
+    start++
+  }
+  while (str[end] === ' ') {
+    end--
+  }
+  // console.log(start, end + 1);
+  newStr = str.slice(start, end + 1)
+  document.write(`${str}变成了${newStr}`);
+  document.write('<br>页面打印会折叠空格，去控制台看')
+  console.log(`${str}变成了${newStr}`);
+</script>
+
+</html>

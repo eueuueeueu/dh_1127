@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // 3.将字符串中—后面的小写字母变成大写，并且删除 - 符号    “abc—r67p8”----->“abcR67P8”
+  let str = 'abc—r67p8'
+  let arr = str.split('—')
+  let newStr = arr[0]
+  for (let i = 0; i < arr[1].length; i++) {
+    // 是字符串就转换大写，不是就直接加上
+    if (typeof arr[1][i] === "string") {
+      newStr += arr[1][i].toUpperCase()
+    } else {
+      newStr += arr[1][i]
+    }
+  }
+  document.write(`${str}变成了${newStr}`);
+</script>
+
+</html>

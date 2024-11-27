@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // 9.手机号隐私处理 "17798765690" ----> "177****5690"
+  let str = prompt('输入一个手机号,将手机号隐私处理')
+  let newStr = ''
+  newStr = str.slice(0, 3) + '****' + str.slice(7, 11)
+  document.write(`${str}变成了${newStr}`);
+</script>
+
+</html>
