@@ -157,3 +157,7 @@
 // console.log(arr9);
 
 // 4.
+
+let str = 'javaScript html AJAX'
+console.log(str.lastIndexOf('A'));  //16
+console.log(str.indexOf('N'));  //-1

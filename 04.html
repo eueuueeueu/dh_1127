@@ -13,14 +13,25 @@
 <script>
   // 4.删除字符串中所有数字，但保留空格字符串       "ert 123dd df"  ---->"ert dd df"
   let str = 'ert 123dd df'
-  let reg = /[0-9]/g
-  let newStr = str.replace(reg, '')
-  // for (let i = 0; i < str.length; i++) {
-  //   if (str[i] !== "number") {
-  //     newStr += str[i]
-  //   }
-  // }
+  let newStr = ''
+  for (let i = 0; i < str.length; i++) {
+    // 一个数字字符串和一个数字比较时，会自动转成数字去比较
+    // 如：console.log('1'>0)  //true
+    // 这里字符串和数字比较就返回false但0-10的数字字符串和数字比较就返回true
+    // 注：'1'这种简称数字字符串
+    if (str[i] >= 0 && str[i] <= 9 && str[i] !== ' ') {
+      newStr += ''
+    } else {
+      newStr += str[i]
+    }
+  }
   document.write(`${str}变成了${newStr}`);
+
+  // 方法2：正则表达式
+  // let str = 'ert 123dd df'
+  // let reg = /[0-9]/g
+  // let newStr = str.replace(reg, '')
+  // document.write(`${str}变成了${newStr}`);
 </script>
 
 </html>
