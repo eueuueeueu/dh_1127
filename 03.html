@@ -12,17 +12,33 @@
 </body>
 <script>
   // 3.将字符串中—后面的小写字母变成大写，并且删除 - 符号    “abc—r67p8”----->“abcR67P8”
+  // let str = 'abc—r67p8'
+  // let arr = str.split('—')
+  // let newStr = arr[0]
+  // for (let i = 0; i < arr[1].length; i++) {
+  //   // 是字符串就转换大写，不是就直接加上
+  //   if (typeof arr[1][i] === "string") {
+  //     newStr += arr[1][i].toUpperCase()
+  //   } else {
+  //     newStr += arr[1][i]
+  //   }
+  // }
+  // document.write(`${str}变成了${newStr}`);
+
+
+  // 不用数组的方法
   let str = 'abc—r67p8'
-  let arr = str.split('—')
-  let newStr = arr[0]
-  for (let i = 0; i < arr[1].length; i++) {
+  let newStr = ''
+  for (let i = str.indexOf('—') + 1; i < str.length; i++) {
     // 是字符串就转换大写，不是就直接加上
-    if (typeof arr[1][i] === "string") {
-      newStr += arr[1][i].toUpperCase()
+    if (str[i] >= 'a' && str[i] <= 'z') {
+      console.log(str[i]);
+      newStr += str[i].toUpperCase()
     } else {
-      newStr += arr[1][i]
+      newStr += str[i]
     }
   }
+  newStr = str.slice(0, str.indexOf('—')) + newStr
   document.write(`${str}变成了${newStr}`);
 </script>
 
